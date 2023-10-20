@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 function TaskForm(props) {
-	const [input, setinput] = useState('');
+	const [input, setInput] = useState('');
 
 	const handleChange = (e) => {
-		setinput(e.target.value);
+		setInput(e.target.value);
 	};
 
 	const handleSubmit = (e) => {
@@ -14,25 +14,24 @@ function TaskForm(props) {
 			id: Math.floor(Math.random() * 10000),
 			text: input
 		});
-
-		setinput('');
+		setInput('');
 	};
 	return (
-		<div className='flex flex-row justify-center mt-6'>
+		<div className='flex flex-row justify-center mt-6 '>
 			<form
-				className=''
 				onSubmit={handleSubmit}
 			>
 				<input
 					className='border-solid border-black border-2'
 					type='text'
-					placeholder='Add a Task...'
+					placeholder='Enter a Task...'
 					value={input}
-					name='name'
+					name='text'
 					onChange={handleChange}
 				/>
 				<button
 					type='submit'
+          className='rounded-lg bg-blue-500 hover:bg-blue-700 text-white ml-2 py-1 px-3'
 				>
 					Add Task
 				</button>
