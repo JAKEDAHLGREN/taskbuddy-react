@@ -15,7 +15,7 @@ TailwindCSS: TailwindCSS is used for styling, enabling rapid and efficient UI de
 Getting Started
 Follow these instructions to get a copy of TaskBuddy running on your local machine:
 
-Clone the Repository: $ git clone https://github.com/your-username/TaskBuddy.git
+Clone the Repository: $ git clone https://github.com/JAKEDAHLGREN/TaskBuddy.git
 
 Navigate to the Project Directory: $ cd TaskBuddy
 
