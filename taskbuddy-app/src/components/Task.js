@@ -10,7 +10,6 @@ function Task({ tasks, completeTask, removeTask, updateTask }) {
 	});
 
 	const submitUpdate = (value) => {
-		console.log('Updating task with value:', value);
 		updateTask(edit.id, value);
 		setEdit({
 			id: null,
@@ -29,20 +28,19 @@ function Task({ tasks, completeTask, removeTask, updateTask }) {
 
 	return tasks.map((task, index) => (
 		<div
-			className={task.isComplete ? 'task-row complete' : 'task-row'}
+			className='flex justify-center items-center'
 			key={index}
 		>
-			<div className='flex flex-row justify-center'>
+			<div className={`flex flex-row justify-between items-center my-1 p-4 rounded-md w-full text-white ${task.color}`}>
 				<div
 					key={task.id}
 					onClick={() => completeTask(task.id)}
-					className=''
 				>
-					{task.text}
+					* {task.text}
 				</div>
-				<div className='flex gap-2 items-center'>
-					<RiCloseCircleLine onClick={() => removeTask(task.id)} />
-					<TiEdit onClick={() => setEdit({ id: task.id, value: task.text })} />
+				<div className='flex gap-3 items-center cursor-pointer'>
+					<RiCloseCircleLine onClick={() => removeTask(task.id)} className='text-white text-2xl' />
+					<TiEdit onClick={() => setEdit({ id: task.id, value: task.text })} className='text-white text-2xl'/>
 				</div>
 			</div>
 		</div>
