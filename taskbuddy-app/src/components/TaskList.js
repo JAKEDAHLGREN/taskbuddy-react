@@ -39,7 +39,7 @@ function TaskList() {
 	};
 
 	return (
-		<div className='flex flex-col justify-center bg-slate-800 p-12 mt-4 rounded-lg overflow-auto'>
+		<div className='flex flex-col justify-center bg-slate-800 p-12 mt-11 rounded-lg overflow-auto'>
 			<h1 className='text-center text-xl font-bold mt-1 text-white'>
 				TASKS OF THE DAY
 			</h1>

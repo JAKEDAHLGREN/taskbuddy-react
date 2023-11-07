@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function TaskForm(props) {
+function TaskForm({ onSubmit }) {
 	const [input, setInput] = useState('');
 	const [colorIndex, setColorIndex] = useState(0);
 
@@ -8,10 +8,10 @@ function TaskForm(props) {
 		setInput(e.target.value);
 	};
 
-	const handleSubmit = (e, index) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		props.onSubmit({
+		onSubmit({
 			id: Math.floor(Math.random() * 10000),
 			text: input,
 			color:
