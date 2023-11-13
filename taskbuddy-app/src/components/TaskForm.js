@@ -44,7 +44,7 @@ function TaskForm({ onSubmit }) {
 				/>
 				<button
 					type='submit'
-					className='rounded-md bg-blue-500 hover:bg-blue-700 text-white ml-2 py-1 px-3'
+					className='rounded-md bg-blue-500 hover:bg-blue-700 text-white ml-2 py-1 px-3 origin-center hover:scale-105'
 				>
 					Add Task
 				</button>
